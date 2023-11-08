@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231108 18:22:56.711" rpa="false" schemaversion="4">
+<suite id="s1" name="Cadastro" source="C:\Users\Thiago\Desktop\Desafio RD Mobile\testes\cadastro.robot">
+<test id="s1-t1" name="Cadastro" line="9">
+<kw name="Abrir App" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>appium:platformVersion=${appium:platformVersion}</arg>
+<arg>appium:deviceName=${appium:deviceName}</arg>
+<arg>appium:automationName=${appium:automationName}</arg>
+<arg>appium:appPackage=${appium:appPackage}</arg>
+<arg>appium:appActivity=${appium:appActivity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20231108 18:22:56.871" endtime="20231108 18:23:18.932"/>
+</kw>
+<status status="PASS" starttime="20231108 18:22:56.871" endtime="20231108 18:23:18.932"/>
+</kw>
+<kw name="Cadastrar Usuario" library="helpers">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/tvRegister</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:18.933" level="INFO">Clicking element 'id=com.example.vamsi.login:id/tvRegister'.</msg>
+<msg timestamp="20231108 18:23:20.053" level="INFO">criteria is com.example.vamsi.login:id/tvRegister</msg>
+<status status="PASS" starttime="20231108 18:23:18.932" endtime="20231108 18:23:20.053"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etRegName</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231108 18:23:24.089" level="INFO">criteria is com.example.vamsi.login:id/etRegName</msg>
+<status status="PASS" starttime="20231108 18:23:20.053" endtime="20231108 18:23:24.089"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etRegName</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:24.090" level="INFO">Clicking element 'id=com.example.vamsi.login:id/etRegName'.</msg>
+<msg timestamp="20231108 18:23:26.267" level="INFO">criteria is com.example.vamsi.login:id/etRegName</msg>
+<status status="PASS" starttime="20231108 18:23:24.089" endtime="20231108 18:23:26.267"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etRegName</arg>
+<arg>${USUARIO_VALIDO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:26.268" level="INFO">Typing text 'Rick Sanchez' into text field 'id=com.example.vamsi.login:id/etRegName'</msg>
+<msg timestamp="20231108 18:23:28.837" level="INFO">criteria is com.example.vamsi.login:id/etRegName</msg>
+<status status="PASS" starttime="20231108 18:23:26.267" endtime="20231108 18:23:28.837"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etRegPhone</arg>
+<arg>${TELEFONE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:28.838" level="INFO">Typing text '42 99988-7766' into text field 'id=com.example.vamsi.login:id/etRegPhone'</msg>
+<msg timestamp="20231108 18:23:34.181" level="INFO">criteria is com.example.vamsi.login:id/etRegPhone</msg>
+<status status="PASS" starttime="20231108 18:23:28.837" endtime="20231108 18:23:34.181"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etRegGmail</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:34.182" level="INFO">Typing text 'rsanchez@email.com' into text field 'id=com.example.vamsi.login:id/etRegGmail'</msg>
+<msg timestamp="20231108 18:23:35.487" level="INFO">criteria is com.example.vamsi.login:id/etRegGmail</msg>
+<status status="PASS" starttime="20231108 18:23:34.181" endtime="20231108 18:23:35.487"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnRegLogin</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:35.488" level="INFO">Clicking element 'id=com.example.vamsi.login:id/btnRegLogin'.</msg>
+<msg timestamp="20231108 18:23:36.157" level="INFO">criteria is com.example.vamsi.login:id/btnRegLogin</msg>
+<status status="PASS" starttime="20231108 18:23:35.487" endtime="20231108 18:23:36.157"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etRegPassword</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:36.158" level="INFO">Typing text 'senhavalida' into text field 'id=com.example.vamsi.login:id/etRegPassword'</msg>
+<msg timestamp="20231108 18:23:37.462" level="INFO">criteria is com.example.vamsi.login:id/etRegPassword</msg>
+<status status="PASS" starttime="20231108 18:23:36.157" endtime="20231108 18:23:37.462"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnRegLogin</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:37.463" level="INFO">Clicking element 'id=com.example.vamsi.login:id/btnRegLogin'.</msg>
+<msg timestamp="20231108 18:23:38.106" level="INFO">criteria is com.example.vamsi.login:id/btnRegLogin</msg>
+<status status="PASS" starttime="20231108 18:23:37.462" endtime="20231108 18:23:38.106"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20231108 18:23:38.106" endtime="20231108 18:23:43.354"/>
+</kw>
+<status status="PASS" starttime="20231108 18:23:18.932" endtime="20231108 18:23:43.354"/>
+</kw>
+<kw name="Login com Usuario Valido" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnGotoLogin</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231108 18:23:43.439" level="INFO">criteria is com.example.vamsi.login:id/btnGotoLogin</msg>
+<status status="PASS" starttime="20231108 18:23:43.356" endtime="20231108 18:23:43.439"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnGotoLogin</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:43.440" level="INFO">Clicking element 'id=com.example.vamsi.login:id/btnGotoLogin'.</msg>
+<msg timestamp="20231108 18:23:47.172" level="INFO">criteria is com.example.vamsi.login:id/btnGotoLogin</msg>
+<status status="PASS" starttime="20231108 18:23:43.439" endtime="20231108 18:23:47.172"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etLogGmail</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231108 18:23:47.226" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<status status="PASS" starttime="20231108 18:23:47.172" endtime="20231108 18:23:47.226"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etLogGmail</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:47.227" level="INFO">Typing text 'rsanchez@email.com' into text field 'id=com.example.vamsi.login:id/etLogGmail'</msg>
+<msg timestamp="20231108 18:23:47.343" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<status status="PASS" starttime="20231108 18:23:47.226" endtime="20231108 18:23:47.343"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etLoginPassword</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:47.344" level="INFO">Typing text 'senhavalida' into text field 'id=com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg timestamp="20231108 18:23:47.947" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<status status="PASS" starttime="20231108 18:23:47.343" endtime="20231108 18:23:47.947"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnLogin</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:47.948" level="INFO">Clicking element 'id=com.example.vamsi.login:id/btnLogin'.</msg>
+<msg timestamp="20231108 18:23:48.612" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<status status="PASS" starttime="20231108 18:23:47.947" endtime="20231108 18:23:48.612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="You are now logged in"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231108 18:23:53.101" level="INFO">xpath criteria: //android.widget.TextView[@text="You are now logged in"]</msg>
+<status status="PASS" starttime="20231108 18:23:48.612" endtime="20231108 18:23:53.101"/>
+</kw>
+<kw name="Go Back" library="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" starttime="20231108 18:23:53.101" endtime="20231108 18:23:56.575"/>
+</kw>
+<status status="PASS" starttime="20231108 18:23:43.356" endtime="20231108 18:23:56.575"/>
+</kw>
+<kw name="Login com Usuario Invalido" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etLogGmail</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231108 18:23:57.089" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<status status="PASS" starttime="20231108 18:23:56.576" endtime="20231108 18:23:57.089"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etLogGmail</arg>
+<arg>${EMAIL_INVALIDO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:57.090" level="INFO">Typing text 'jerry_s@123.com' into text field 'id=com.example.vamsi.login:id/etLogGmail'</msg>
+<msg timestamp="20231108 18:23:57.230" level="INFO">criteria is com.example.vamsi.login:id/etLogGmail</msg>
+<status status="PASS" starttime="20231108 18:23:57.089" endtime="20231108 18:23:57.230"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/etLoginPassword</arg>
+<arg>${SENHA_INVALIDA}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:57.231" level="INFO">Typing text 'senhainvalida' into text field 'id=com.example.vamsi.login:id/etLoginPassword'</msg>
+<msg timestamp="20231108 18:23:58.309" level="INFO">criteria is com.example.vamsi.login:id/etLoginPassword</msg>
+<status status="PASS" starttime="20231108 18:23:57.230" endtime="20231108 18:23:58.309"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnLogin</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231108 18:23:58.310" level="INFO">Clicking element 'id=com.example.vamsi.login:id/btnLogin'.</msg>
+<msg timestamp="20231108 18:23:59.016" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<status status="PASS" starttime="20231108 18:23:58.309" endtime="20231108 18:23:59.016"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>id=com.example.vamsi.login:id/btnLogin</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20231108 18:23:59.599" level="INFO">criteria is com.example.vamsi.login:id/btnLogin</msg>
+<status status="PASS" starttime="20231108 18:23:59.016" endtime="20231108 18:23:59.599"/>
+</kw>
+<status status="PASS" starttime="20231108 18:23:56.576" endtime="20231108 18:23:59.599"/>
+</kw>
+<kw name="Fechar App" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20231108 18:23:59.599" endtime="20231108 18:24:02.197"/>
+</kw>
+<status status="PASS" starttime="20231108 18:23:59.599" endtime="20231108 18:24:02.197"/>
+</kw>
+<status status="PASS" starttime="20231108 18:22:56.870" endtime="20231108 18:24:02.198"/>
+</test>
+<status status="PASS" starttime="20231108 18:22:56.712" endtime="20231108 18:24:02.198"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
